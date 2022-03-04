@@ -1,3 +1,4 @@
+//NAVBAR
 %flex-layout {
     width: 100%;
     display: flex;
@@ -5,9 +6,6 @@
     align-items: center;
     box-sizing: border-box;
 }
-//% before a class stops the styles from being compiled into the finished css - instead the extended styles are see in the classes where the extention took place
-
-//MUCH like using a mixin you can include a class in another using the extend keyword, The main difference is, is that you cant take in arguements when you use @extend but you can with mixins.
 
 .navbar {
     @extend %flex-layout;
@@ -15,8 +13,6 @@
     box-shadow:  0px 14px 14px -6px #000000;
 }
 
-
-//another use of the extend keyword again
 @each $key, $val in $colors {
     .navbar-#{$key} {
         @extend .navbar;

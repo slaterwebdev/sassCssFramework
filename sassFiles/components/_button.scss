@@ -1,55 +1,4 @@
-//MIXIN EXAMPLE
-//So a mixin is essentially a way to group many styles together within a scope, you can then just reference this mixin in one line inside selectors rather than many lines, this is good in situations when you have to re-write the same styles multiple lines
-
-
-//SO Instead of this...
-// @each $key, $val in $colors {
-//     .btn-#{key}{
-//         text-decoration: none;
-//         cursor: pointer;
-//         display: inline-block;
-//         border: 0;
-//         padding: $base-padding $base-padding * 2;
-//         border-radius: $base-border-radius; 
-//         background-color: $val;
-//     }
-// } 
-
-//You can do this...
-
-@mixin btn() {
-    text-decoration: none;
-    cursor: pointer;
-    display: inline-block;
-    border: 0;
-    padding: $base-padding $base-padding * 2;
-    border-radius: $base-border-radius; 
-    // background-color: $val; 
-    //This has to be included in the each loop and not the mixin as it is a local variable that can only be accessed within the loop scope.
-
-    //You can however pass in a parameter in the parenthesis and an arguement when the mixin is included much like JS functions
-}
-
-// @each $key, $val in $colors {
-//    .btn-#{key}{
-//     @include btn();
-//     &:hover{
-//         background-color: aqua;
-//     }
-//     background-color: $val; 
-//    }
-// }
-
-//Using mixins with parameters and arguements
-@mixin btn-two($bg-color: #666777) { //Placeholder parameter for mixin
-    text-decoration: none;
-    cursor: pointer;
-    display: inline-block;
-    padding: $base-padding $base-padding * 2;
-    border-radius: $base-border-radius; 
-    background-color: $bg-color; //Inevitably replaced with the included mixin arguement
-}
-
+//BUTTONS
 @each $key, $val in $colors {
     .btn-#{$key}{
         @include btn-two($val); //Passing in the Val local var in to the mixin as an arguement
@@ -64,10 +13,6 @@
     }
 }
 
-//Including the button mixin with no parameters
-//unless you give the mixin parameter a default value - the below will not work as $bg-color will not be replaced by the mixin arguement
 .btn {
     @include btn;
 }
-//how to get around this? 
-//@mixin btn-two($bg-color: #456887) This gives the mixin a default value unless it picks up an arguement you have specifically given it as an arguement

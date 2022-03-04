@@ -191,10 +191,8 @@ $utilities: (
 
 //Cycles through the key(properies) and values(map) in utilities
 @each $property, $map in $utilities {
-    //so $prefix will change value through each iteration, so 1st it = p then second = pl 
     $prefix: map-get($map , 'prefix');
 
-    //exactly the same as above but one more map deep
     $values: map-get($map , 'values');
     @each $k, $v in $values {
          .#{$prefix}-#{$k} {

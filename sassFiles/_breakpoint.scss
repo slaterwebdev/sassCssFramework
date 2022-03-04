@@ -18,9 +18,7 @@ $grid-gaps: (
 );
 
 //LISTS 
-//Much like an array in JS - a SASS list 
 $layout-list: flex-start, flex-end, center, space-between, space-around ;
-//creating mixin (like sass array/object - list of styles - making a media query to be a property is has - and making the min width = to a mproperty from theh breakpoint map using a sass built in function)
 @each $val in $layout-list {
     .justify-#{$val} {
         justify-content: $val;
@@ -35,7 +33,7 @@ $layout-list: flex-start, flex-end, center, space-between, space-around ;
 
 @mixin xs { //STORING MEDIA QUERY IN MIXIN
     @media  screen and (min-width: map-get($breakpoints, "xs")) {
-        @content; //Keyword - It is a placeholder for a mixins content and will be replaced by what you include in your mixin invocation
+        @content; 
     }
 };
 
@@ -64,6 +62,8 @@ $layout-list: flex-start, flex-end, center, space-between, space-around ;
 };
 
 //GRID SYSTEM 
+
+//Grid Gap classes
 @each $key, $val in $grid-gaps {
     .g-#{$key} {
         margin-left: $val;

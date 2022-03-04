@@ -1,4 +1,5 @@
-@use 'sass:math'; //Built in sass module that can be used later in the code, essentially sass answer to a function 
+//CARD
+@use 'sass:math'; 
 
 .card {
     border-radius: math.div($base-border-radius, 4); //Math sass module being used to divide 
