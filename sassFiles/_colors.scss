@@ -1,0 +1,63 @@
+//A LOOP USED TO LOOP THROUGH THE COLORS MAP
+//@each initiates the loop 
+//$key local variable that references the keys in the colors map 
+//$val local variable that references the values in the colors map 
+//in - whatever follows the in keyword is the map that the loop will iterate through 
+
+// @each $key, $val in $colors {
+//     .text-#{$key} {
+//         color: #{$val};
+//     }
+// }
+
+//#{$key}, #{$val} - So this is the syntax you have to use to reference the local variables
+//What this will now do is generate 13 classes all with unique names and properites and can be
+//seen in main.css
+
+
+//USING A FOR LOOP WITHIN AN EACH LOOP 
+//Due to for loop being similar to js for loops you can easily create numbered variations of things
+@each $key, $val in $colors {
+    .text-#{$key} {
+        color: #{$val};
+
+        &:hover { //SO & targets the parent selector, this is useful for Psuedo selectors as seen
+            color: blue; 
+        }
+    }
+
+    @for $i from 1 through 9 {
+        .text-#{$key}-light-#{$i}{
+            color: mix(white, $val, $i * 10);
+        }
+    }
+}
+//So because the for loop is within the each loop you can access the key and val variables in the for loop
+//So in the color property we have used the mix() function this takes three arguements - a color - a second color - and a percentage of how much we mix he first color with the second
+//So as we iterate through it will go 10 20 30 40 50 60 70 80 90 - This is read as a percentage in a mix() function. And like any other loop it will generate numerous classes in the main.css file. 
+
+//SO the for loop will make 9 classes each with 10% more white mixed in than the previous, it will do 9 classes for each value in the colors map AKA 9 * 13 :) 
+
+
+//SO this is just making 9 classes only using the color equal to primary variable. 
+@for $i from 1 through 9 {
+    .text-light-#{$i}{
+        color: mix(white, $primary, $i * 10);
+    }
+}
+
+
+//IF ELSE STATEMENTS USING SASS 
+@if(10 < 5){
+    .test-if {
+        color: #765567;
+    }
+} @else {
+    .test-if-2 {
+        color: #788867;
+    }
+}
+//Other Logical example
+//($val != black)
+//or
+//($val != black and $val != white)

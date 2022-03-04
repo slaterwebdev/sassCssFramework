@@ -1,0 +1,9 @@
+//Sass file solely for functions - modular approach
+//Functions are very similar to mixins but instead of "outputting" multiple styles it outputs a single value
+@function light-comp ($color) {
+    $compliment: compliment($color);
+    $lighten: lighten($compliment);
+    @return $light-compliment;
+}
+//Takes in the parameter and performs multiple sass functions on to it
+//That is the basis of SASS functions putting a variable through multiple sass functions/changes

@@ -1,0 +1,47 @@
+// theme colors
+$primary: #326dee !default;
+$secondary: #1ac886 !default;
+$error: #d32752 !default;
+$info: #f6c31c !default;
+
+//Color Pallete - Using Sass Maps (Essentially SASS version of a JS object storing multiple key value pairs)
+//Denoted using brackets after the variable name and simple key:value pairs seperated with commas. 
+$colors: (
+  "primary": #326dee,
+  "secondary": #1ac886,
+  "error": #d32752,
+  "info": #f6c31c,
+  "blue": #1919e6,
+  "red": #e61919,
+  "yellow": #e6e619,
+  "green": #19e635,
+  "orange": #ffa600,
+  "purple": #9900ff,
+  "gray": #808080,
+  "black": black,
+  "white": white,
+);
+
+//debug keyword allows you to "console.log a value in to the terminal"
+@debug map-get($colors , "green"); //map-get($colors , "green"); grabs what "green" is equal to, this is how you would set a css key equal to a map variable @debug returns #19e635
+
+@debug map-has-key($colors , "secondary"); //Checks in the colors map to see if "secondary" exists @debug returns true in the terminal.
+
+@debug map-remove($colors, "primary"); // removes the key you search for
+//@debug returns the new map without the key you chose to remove
+
+@debug map-merge($colors, ('aqua': #99eeff));//Adds another map to og map, A map is just something that has parenthesis around it, meaning this one map function can be used to add 1 or more key:value pairs or even a whole other map $secondMap
+
+//EG of using the map functions
+.test-btn {
+    color: map-get($colors, "purple");
+}
+
+// spacing
+$base-padding: 0.75rem;
+$base-margin: 0.75rem;
+
+// borders
+$base-border-thickness: 1px;
+$base-border-radius: 20px;
+$border: red 1px solid;
