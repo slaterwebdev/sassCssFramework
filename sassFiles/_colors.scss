@@ -16,9 +16,5 @@
     }
 }
 
-@for $i from 1 through 9 {
-    .text-light-#{$i}{
-        color: mix(white, $primary, $i * 10);
-    }
-}
+
 

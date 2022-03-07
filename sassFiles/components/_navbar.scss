@@ -10,7 +10,7 @@
 .navbar {
     @extend %flex-layout;
     padding: 10px; 
-    box-shadow:  0px 14px 14px -6px #000000;
+    box-shadow:  $base-box-shadow;
 }
 
 @each $key, $val in $colors {

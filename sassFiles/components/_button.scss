@@ -1,7 +1,22 @@
 //BUTTONS
+@mixin btn($bg-color: #e2e2e2) {
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    border: 0;
+    padding: $base-padding $base-padding * 2;
+    border-radius: $base-border-radius;
+    background-color: $bg-color;
+  }
+  
+.btn {
+@include btn;
+}
+  
+
 @each $key, $val in $colors {
     .btn-#{$key}{
-        @include btn-two($val); //Passing in the Val local var in to the mixin as an arguement
+        @include btn($val); //Passing in the Val local var in to the mixin as an arguement
         &:hover {
             background-color: lighten($val, 5); //this is a SASS function that will lighten a color by a certain percent (5 in this case)
         }
@@ -13,6 +28,3 @@
     }
 }
 
-.btn {
-    @include btn;
-}

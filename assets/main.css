@@ -1,15 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-.test-btn {
-  color: #9900ff;
-}
-
-/* reset styles */
+/*RESET STYLES*/
 * {
   color: inherit;
   margin: 0;
   padding: 0;
 }
 
+/*BASE STYLES*/
 body {
   font-family: Poppins;
 }
@@ -591,55 +588,45 @@ img {
   color: white;
 }
 
-.text-light-1 {
-  color: #477cf0;
-}
-
-.text-light-2 {
-  color: #5b8af1;
-}
-
-.text-light-3 {
-  color: #7099f3;
-}
-
-.text-light-4 {
-  color: #84a7f5;
-}
-
-.text-light-5 {
-  color: #99b6f7;
-}
-
-.text-light-6 {
-  color: #adc5f8;
-}
-
-.text-light-7 {
-  color: #c2d3fa;
-}
-
-.text-light-8 {
-  color: #d6e2fc;
-}
-
-.text-light-9 {
-  color: #ebf0fd;
-}
-
-.test-if-2 {
-  color: #788867;
-}
-
 .card {
   border-radius: 5px;
   border: red 1px solid;
+}
+
+.card {
+  display: block;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+.card .card-title {
+  font-size: 1rem;
+  padding-bottom: 0.75rem;
+  font-weight: bold;
+}
+.card .card-body {
+  font-size: 1rem;
+}
+.card .card-body a {
+  text-decoration: underline;
+}
+
+.btn {
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  border: 0;
+  padding: 0.75rem 1.5rem;
+  border-radius: 20px;
+  background-color: #e2e2e2;
 }
 
 .btn-primary {
   text-decoration: none;
   cursor: pointer;
   display: inline-block;
+  border: 0;
   padding: 0.75rem 1.5rem;
   border-radius: 20px;
   background-color: #326dee;
@@ -656,6 +643,7 @@ img {
   text-decoration: none;
   cursor: pointer;
   display: inline-block;
+  border: 0;
   padding: 0.75rem 1.5rem;
   border-radius: 20px;
   background-color: #1ac886;
@@ -672,6 +660,7 @@ img {
   text-decoration: none;
   cursor: pointer;
   display: inline-block;
+  border: 0;
   padding: 0.75rem 1.5rem;
   border-radius: 20px;
   background-color: #d32752;
@@ -688,6 +677,7 @@ img {
   text-decoration: none;
   cursor: pointer;
   display: inline-block;
+  border: 0;
   padding: 0.75rem 1.5rem;
   border-radius: 20px;
   background-color: #f6c31c;
@@ -704,6 +694,7 @@ img {
   text-decoration: none;
   cursor: pointer;
   display: inline-block;
+  border: 0;
   padding: 0.75rem 1.5rem;
   border-radius: 20px;
   background-color: #1919e6;
@@ -720,6 +711,7 @@ img {
   text-decoration: none;
   cursor: pointer;
   display: inline-block;
+  border: 0;
   padding: 0.75rem 1.5rem;
   border-radius: 20px;
   background-color: #e61919;
@@ -736,6 +728,7 @@ img {
   text-decoration: none;
   cursor: pointer;
   display: inline-block;
+  border: 0;
   padding: 0.75rem 1.5rem;
   border-radius: 20px;
   background-color: #e6e619;
@@ -752,6 +745,7 @@ img {
   text-decoration: none;
   cursor: pointer;
   display: inline-block;
+  border: 0;
   padding: 0.75rem 1.5rem;
   border-radius: 20px;
   background-color: #19e635;
@@ -768,6 +762,7 @@ img {
   text-decoration: none;
   cursor: pointer;
   display: inline-block;
+  border: 0;
   padding: 0.75rem 1.5rem;
   border-radius: 20px;
   background-color: #ffa600;
@@ -784,6 +779,7 @@ img {
   text-decoration: none;
   cursor: pointer;
   display: inline-block;
+  border: 0;
   padding: 0.75rem 1.5rem;
   border-radius: 20px;
   background-color: #9900ff;
@@ -800,6 +796,7 @@ img {
   text-decoration: none;
   cursor: pointer;
   display: inline-block;
+  border: 0;
   padding: 0.75rem 1.5rem;
   border-radius: 20px;
   background-color: #808080;
@@ -816,6 +813,7 @@ img {
   text-decoration: none;
   cursor: pointer;
   display: inline-block;
+  border: 0;
   padding: 0.75rem 1.5rem;
   border-radius: 20px;
   background-color: black;
@@ -832,6 +830,7 @@ img {
   text-decoration: none;
   cursor: pointer;
   display: inline-block;
+  border: 0;
   padding: 0.75rem 1.5rem;
   border-radius: 20px;
   background-color: white;
@@ -842,15 +841,6 @@ img {
 
 .btn-outlined-white {
   border: 1px solid white;
-}
-
-.btn {
-  text-decoration: none;
-  cursor: pointer;
-  display: inline-block;
-  border: 0;
-  padding: 0.75rem 1.5rem;
-  border-radius: 20px;
 }
 
 .p-0 {
@@ -1091,146 +1081,6 @@ img {
 
 .ml-5 {
   margin-left: 6rem;
-}
-
-.b-0 {
-  border: 0;
-}
-
-.b-1 {
-  border: 0.75rem;
-}
-
-.b-2 {
-  border: 1.5rem;
-}
-
-.b-3 {
-  border: 3rem;
-}
-
-.b-4 {
-  border: 4.5rem;
-}
-
-.b-5 {
-  border: 6rem;
-}
-
-.bt-0 {
-  border-top: 0;
-}
-
-.bt-1 {
-  border-top: 0.75rem;
-}
-
-.bt-2 {
-  border-top: 1.5rem;
-}
-
-.bt-3 {
-  border-top: 3rem;
-}
-
-.bt-4 {
-  border-top: 4.5rem;
-}
-
-.bt-5 {
-  border-top: 6rem;
-}
-
-.br-0 {
-  border-right: 0;
-}
-
-.br-1 {
-  border-right: 0.75rem;
-}
-
-.br-2 {
-  border-right: 1.5rem;
-}
-
-.br-3 {
-  border-right: 3rem;
-}
-
-.br-4 {
-  border-right: 4.5rem;
-}
-
-.br-5 {
-  border-right: 6rem;
-}
-
-.bb-0 {
-  border-bottom: 0;
-}
-
-.bb-1 {
-  border-bottom: 0.75rem;
-}
-
-.bb-2 {
-  border-bottom: 1.5rem;
-}
-
-.bb-3 {
-  border-bottom: 3rem;
-}
-
-.bb-4 {
-  border-bottom: 4.5rem;
-}
-
-.bb-5 {
-  border-bottom: 6rem;
-}
-
-.bl-0 {
-  border-left: 0;
-}
-
-.bl-1 {
-  border-left: 0.75rem;
-}
-
-.bl-2 {
-  border-left: 1.5rem;
-}
-
-.bl-3 {
-  border-left: 3rem;
-}
-
-.bl-4 {
-  border-left: 4.5rem;
-}
-
-.bl-5 {
-  border-left: 6rem;
-}
-
-.justify-flex-start {
-  justify-content: flex-start;
-}
-
-.justify-flex-end {
-  justify-content: flex-end;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-.justify-space-between {
-  justify-content: space-between;
-}
-
-.justify-space-around {
-  justify-content: space-around;
 }
 
 .g-0 {
@@ -1570,7 +1420,7 @@ img {
 
 .navbar, .navbar-white, .navbar-black, .navbar-gray, .navbar-purple, .navbar-orange, .navbar-green, .navbar-yellow, .navbar-red, .navbar-blue, .navbar-info, .navbar-error, .navbar-secondary, .navbar-primary {
   padding: 10px;
-  box-shadow: 0px 14px 14px -6px #000000;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-primary {
@@ -1623,6 +1473,50 @@ img {
 
 .navbar-white {
   background-color: white;
+}
+
+.justify-flex-start {
+  justify-content: flex-start;
+}
+
+.justify-flex-end {
+  justify-content: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+.justify-space-around {
+  justify-content: space-around;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-flex-start {
+  align-items: flex-start;
+}
+
+.align-flex-end {
+  align-items: flex-end;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
 }
 
 /*# sourceMappingURL=main.css.map */

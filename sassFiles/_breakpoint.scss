@@ -17,14 +17,6 @@ $grid-gaps: (
     '3': 15px
 );
 
-//LISTS 
-$layout-list: flex-start, flex-end, center, space-between, space-around ;
-@each $val in $layout-list {
-    .justify-#{$val} {
-        justify-content: $val;
-    }
-}
-
 @mixin baseCol {
     @media screen and (min-width: map-get($breakpoints, "xs")) {
         @content;
