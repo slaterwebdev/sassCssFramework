@@ -17,15 +17,41 @@ ul {
   list-style-type: none;
 }
 
-hr {
-  border: 0;
-  border-top: 1px dotted #efefef;
+h2 {
+  border-bottom: 2px solid #326dee;
 }
 
 img {
   max-width: 100%;
 }
 
+.navbar, .navbar-white, .navbar-black, .navbar-gray, .navbar-purple, .navbar-orange, .navbar-green, .navbar-yellow, .navbar-red, .navbar-blue, .navbar-info, .navbar-error, .navbar-secondary, .navbar-primary {
+  display: block !important;
+}
+
+.navbar div button, .navbar-white div button, .navbar-black div button, .navbar-gray div button, .navbar-purple div button, .navbar-orange div button, .navbar-green div button, .navbar-yellow div button, .navbar-red div button, .navbar-blue div button, .navbar-info div button, .navbar-error div button, .navbar-secondary div button, .navbar-primary div button {
+  line-height: 2;
+}
+
+.br-sm,
+.br-md,
+.br-lg,
+.br-full {
+  border: 2px solid #326dee;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar p, .navbar-white p, .navbar-black p, .navbar-gray p, .navbar-purple p, .navbar-orange p, .navbar-green p, .navbar-yellow p, .navbar-red p, .navbar-blue p, .navbar-info p, .navbar-error p, .navbar-secondary p, .navbar-primary p {
+    font-size: 8px !important;
+  }
+
+  .navbar div a, .navbar-white div a, .navbar-black div a, .navbar-gray div a, .navbar-purple div a, .navbar-orange div a, .navbar-green div a, .navbar-yellow div a, .navbar-red div a, .navbar-blue div a, .navbar-info div a, .navbar-error div a, .navbar-secondary div a, .navbar-primary div a {
+    width: 60px;
+    text-align: center;
+    font-size: 8px !important;
+    padding: 5px 8px !important;
+  }
+}
 .text-primary {
   color: #326dee;
 }
