@@ -169,7 +169,82 @@ $utilities: (
         "xl": $font-size-xl,
         "xxl": $font-size-xxl
         )
+    ),
+//----------------------------------
+
+//WIDTHS
+    "width": (
+        "prefix": "w",
+        "values": (
+        "10": 10%,
+        "20": 20%,
+        "30": 30%,
+        "40": 40%,
+        "50": 50%,
+        "60": 60%,
+        "70": 70%,
+        "80": 80%,
+        "90": 90%,
+        "100": 100%,
+        )
+    ),
+//----------------------------------
+
+//POSITION
+"position": (
+    "prefix": "pos",
+    "values": (
+    "relative": relative,
+    "absolute": absolute,
+    "static": static,
+    "fixed": fixed
     )
+),
+
+"top": (
+    "prefix": "top",
+    "values": (
+    "0": 0,
+    "25": 25%,
+    "50": 50%,
+    "75": 75%,
+    "100": 100%
+    )
+),
+
+"right": (
+    "prefix": "right",
+    "values": (
+    "0": 0,
+    "25": 25%,
+    "50": 50%,
+    "75": 75%,
+    "100": 100%
+    )
+),
+
+"left": (
+    "prefix": "left",
+    "values": (
+    "0": 0,
+    "25": 25%,
+    "50": 50%,
+    "75": 75%,
+    "100": 100%
+    )
+),
+
+"bottom": (
+    "prefix": "bottom",
+    "values": (
+    "0": 0,
+    "25": 25%,
+    "50": 50%,
+    "75": 75%,
+    "100": 100%
+    )
+)
+//----------------------------------
 );
 
 //Cycles through the key(properies) and values(map) in utilities
@@ -183,86 +258,3 @@ $utilities: (
          }
     }
 }
-
-//BORDER
-$borderMap: (
-    'border': ( 
-    'prefix': 'b',
-    'values': (
-        '0': 0,
-        '1': $base-border-thickness,
-        '2': $base-border-thickness * 2,
-        '3': $base-border-thickness * 4,
-        '4': $base-border-thickness * 6,
-        '5': $base-border-thickness * 8
-        )
-    ),
-
-    'border-top': ( 
-        'prefix': 'bt',
-        'values': (
-            '0': 0,
-            '1': $base-border-thickness,
-            '2': $base-border-thickness * 2,
-            '3': $base-border-thickness * 4,
-            '4': $base-border-thickness * 6,
-            '5': $base-border-thickness * 8
-        )
-    ),
-
-    'border-right': ( 
-        'prefix': 'br',
-        'values': (
-            '0': 0,
-            '1': $base-border-thickness,
-            '2': $base-border-thickness * 2,
-            '3': $base-border-thickness * 4,
-            '4': $base-border-thickness * 6,
-            '5': $base-border-thickness * 8
-        )
-    ),
-
-    'border-bottom': ( 
-        'prefix': 'bb',
-        'values': (
-            '0': 0,
-            '1': $base-border-thickness,
-            '2': $base-border-thickness * 2,
-            '3': $base-border-thickness * 4,
-            '4': $base-border-thickness * 6,
-            '5': $base-border-thickness * 8
-        )
-    ),
-
-    'border-left': ( 
-        'prefix': 'bl',
-        'values': (
-            '0': 0,
-            '1': $base-border-thickness,
-            '2': $base-border-thickness * 2,
-            '3': $base-border-thickness * 4,
-            '4': $base-border-thickness * 6,
-            '5': $base-border-thickness * 8
-        )
-    ) 
-);
-
-@each $property, $map in $borderMap {
-    $prefix: map-get($map , 'prefix');
-    // $values: map-get($map , 'values');
-    // @each $k, $v in $values {
-    //     @debug $prefix;
-    //     .#{$prefix}-#{$k}{
-    //         $property: $v solid black;
-    //     }
-    // }
-}
-
-$values: map-get($borderMap , 'values');
-    @each $k, $v in $borderMap {
-        @debug $k;
-        @debug $v;
-        // .#{$prefix}-#{$k}{
-        //     $property: $v solid black;
-        // }
-    }
