@@ -26,6 +26,7 @@ $grid-columns: 12;
     }
 }
 
+
 @include xs { 
     @for $i from 1 to ($grid-columns +1) {
         .col-#{$i}-xs{

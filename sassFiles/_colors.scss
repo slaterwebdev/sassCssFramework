@@ -1,7 +1,10 @@
 //USING A FOR LOOP WITHIN AN EACH LOOP 
-//Due to for loop being similar to js for loops you can easily create numbered variations of things
 @each $key, $val in $colors {
     .text-#{$key} {
+        color: #{$val};
+    }
+
+    .text-#{$key}-hover {
         color: #{$val};
 
         &:hover { //SO & targets the parent selector, this is useful for Psuedo selectors as seen
@@ -9,10 +12,14 @@
         }
     }
 
-    @for $i from 1 through 9 {
-        .text-#{$key}-light-#{$i}{
-            color: mix(white, $val, $i * 10);
-        }
+    //Background color
+    .bg-#{$key} {
+        background-color: $val;
+    }
+
+    //Border color
+    .b-#{$key}{
+        border: $val;
     }
 }
 

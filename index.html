@@ -7,18 +7,20 @@
     <link rel="stylesheet" href="assets/main.css">
     <title>My CSS framework</title>
 </head>
-<body>
-
-    <div class="row justify-space-center navbar mb-2">
+<body class="text-right">
+    <div class="row justify-space-center navbar">
         <div class="container row justify-space-between align-center">
-            <h1>My CSS framework</h1>
-            <p>Using SASS I've created my own framework.</p>
+            <h1>QuickStyle</h1>
+            <div>
+                <p class="font-sm">Using SASS I've created my own CSS framework.</p>
+            </div>
         </div>
     </div>
+    <a href="#" class="btn-primary text-white mr-1 mt-1">Click here to see the code</a>
 
     <div class="container text-center">
         <!--Colors-->
-        <h2 class="mb-1 mt-1">Colors</h2>
+        <h2 class="mb-1 mt-1 bb-1 b-primary">Colors</h2>
         <span class="text-primary">primary text</span> | 
         <span class="text-secondary">secondary text</span> | 
         <span class="text-error">error text</span> | 
@@ -31,46 +33,115 @@
         <span class="text-orange">orange text</span> | 
         <span class="text-gray">gray text</span>
 
+        <!--Fonts-->
+        <h2 class="mb-1 mt-1">Fonts</h2>
+        <p class="text-primary font-sm">primary text</p>
+        <p class="text-primary font-md">primary text</p>
+        <p class="text-primary font-lg">primary text</p>
+        <p class="text-primary font-xl">primary text</p>
+        <p class="text-primary font-xxl">primary text</p>  
+
         <!--CARDS-->
         <h2 class="mb-1 mt-2">Cards</h2>
-        <div class="card class mb-1">
-            <h2>blaaaah</h2>
-            <a href="">This is an anchor tag</a>
-            <p class="error">ahhhhhh</p>
-            <p class="notification">uhhhhhhhhh</p>
-            <button>click</button>
+        <div class="card class mb-1 col-3">
+            <h2 class="card-title">Card Title</h2>
+            <div class="card-body">
+                <a href="">This is an anchor tag</a>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p>Lorem ipsum dolor sit.</p>
+                <button class="btn">click</button>
+            </div>
         </div>
+
+        <!--Border-rad-->
+        <h2 class="mb-1 mt-1">Border Radius</h2>
+        <a class="text-primary br-sm mx-1">br-sm</a>
+        <a class="text-primary br-md">br-md</a>
+        <a class="text-primary br-lg">br-lg</a>
+        <a class="text-primary br-full">br-full</a>
 
         <!--BUTTONS-->
         <h2 class="mt-2">Buttons</h2>
-        <a href="#" class="btn">default btn</a>
-        <a href="#" class="btn-primary text-white">click me</a>
-        <a href="#" class="btn-secondary text-white btn-outlined-error">click me</a>
-        <a href="#" class="btn-error text-white">click me</a>
-        <a href="#" class="btn-info text-white btn-outlined-info">click me</a>
-        <a href="#" class="btn-purple text-orange">click me</a>
+        <a href="#" class="btn m-1">default btn</a>
+        <a href="#" class="btn-primary text-white m-1">click me</a>
+        <a href="#" class="btn-secondary text-white btn-outlined-error m-1">click me</a>
+        <a href="#" class="btn-error text-white m-1">click me</a>
+        <a href="#" class="btn-info text-white btn-outlined-info m-1">click me</a>
+        <a href="#" class="btn-purple text-orange m-1">click me</a>
         
 
         <!--RESPONSIVE COL/GRID-->
-        <h2 class="mt-2 mb-1">Responsive col/grid</h2>
-        <div class="row">
+        <h2 class="mt-2 mb-1">Responsive column breakpoint</h2>
+        <div class="row mb-3 justify-center">
             <div class="col-12-sm col-5-md col-3-xl">
-                <h1 style="text-align: center; outline: red 1px solid;">Hey</h1>
+                <h1 class="bg-purple">col breakpoint<br>example</h1>
             </div>
         </div>
 
-        <div class="row justify-center">
+        <!--Background color grid-->
+        <h2 class="mt-2 mb-1">Background-color & Grid</h2>
+        <div class="row justify-center mb-3">
             <div class="col-2 g-2">
-                <h1 style="background: crimson;">HI</h1>
+                <h1 class="bg-primary">///////</h1>
             </div>
-            <div class="col-2">
-                <h1 style="background: crimson;">HI</h1>
+            <div class="col-2 g-2">
+                <h1 class="bg-secondary">///////</h1>
             </div>
-            <div class="col-2">
-                <h1 style="background: crimson;">HI</h1>
+            <div class="col-2 g-2">
+                <h1 class="bg-info">///////</h1>
             </div>
-            <div class="col-2">
-                <h1 style="background: crimson;">HI</h1>
+            <div class="col-2 g-2">
+                <h1 class="bg-error">///////</h1>
+            </div>
+        </div>
+
+        <div class="row justify-center mb-3">
+            <div class="col-2 g-2">
+                <h1 class="bg-orange">///////</h1>
+            </div>
+            <div class="col-2 g-2">
+                <h1 class="bg-purple">///////</h1>
+            </div>
+            <div class="col-2 g-2">
+                <h1 class="bg-gray">///////</h1>
+            </div>
+            <div class="col-2 g-2">
+                <h1 class="bg-yellow">///////</h1>
+            </div>
+        </div>
+
+        <!--opacity-->
+        <h2 class="mt-2 mb-1">Opacity Classes</h2>
+        <div class="row justify-center mb-3">
+            <div class="col-1">
+                <h1 class="bg-error o-10">///</h1>
+            </div>
+            <div class="col-1">
+                <h1 class="bg-error o-20">///</h1>
+            </div>
+            <div class="col-1">
+                <h1 class="bg-error o-30">///</h1>
+            </div>
+            <div class="col-1">
+                <h1 class="bg-error o-40">///</h1>
+            </div>
+            <div class="col-1">
+                <h1 class="bg-error o-50">///</h1>
+            </div>
+            <div class="col-1">
+                <h1 class="bg-error o-60">///</h1>
+            </div>
+            <div class="col-1">
+                <h1 class="bg-error o-70">///</h1>
+            </div>
+            <div class="col-1">
+                <h1 class="bg-error o-80">///</h1>
+            </div>
+            <div class="col-1">
+                <h1 class="bg-error o-90">///</h1>
+            </div>
+            <div class="col-1">
+                <h1 class="bg-error o-100">///</h1>
             </div>
         </div>
     </div>

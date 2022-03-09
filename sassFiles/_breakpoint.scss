@@ -54,7 +54,6 @@ $grid-gaps: (
 };
 
 //GRID SYSTEM 
-
 //Grid Gap classes
 @each $key, $val in $grid-gaps {
     .g-#{$key} {
